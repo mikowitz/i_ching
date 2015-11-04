@@ -1,0 +1,48 @@
+---
+- number: 1
+  binary: 7
+  english: "The Creative"
+  chinese: "Qián"
+  characters: "乾"
+
+- number: 2
+  binary: 0
+  english: "The Receptive"
+  chinese: "Kūn"
+  characters: "坤"
+
+- number: 3
+  binary: 4
+  english: "The Arousing"
+  chinese: "Zhèn"
+  characters: "震"
+
+- number: 4
+  binary: 1
+  english: "Keeping Still"
+  chinese: "Gèn"
+  characters: "艮"
+
+- number: 5
+  binary: 2
+  english: "The Abysmal"
+  chinese: "Kăn"
+  characters: "坎"
+
+- number: 6
+  binary: 5
+  english: "The Clinging"
+  chinese: "Lí"
+  characters: "離"
+
+- number: 7
+  binary: 6
+  english: "The Joyous"
+  chinese: "Duì"
+  characters: "兌"
+
+- number: 8
+  binary: 3
+  english: "The Gentle"
+  chinese: "Xùn"
+  characters: "巽"
