@@ -1,7 +1,7 @@
 module IChing
   class Hexagram
     include HasAttributes
-    has_attributes :english_name, :chinese_name, :king_wen_number, :characters, :judgement, :image
+    has_attributes :english_name, :chinese_name, :king_wen_number, :characters, :binary, :judgement, :image
 
     class << self
       def get(king_wen_number)
@@ -13,6 +13,10 @@ module IChing
       def table
         IChing::DB.hexagrams
       end
+    end
+
+    def line(line_place)
+      Line.get(self.king_wen_number, line_place)
     end
   end
 end
