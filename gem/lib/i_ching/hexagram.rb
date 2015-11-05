@@ -15,6 +15,10 @@ module IChing
       end
     end
 
+    def lines
+      Line.all(self.king_wen_number)
+    end
+
     def line(line_place)
       Line.get(self.king_wen_number, line_place)
     end

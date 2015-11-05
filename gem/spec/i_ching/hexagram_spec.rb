@@ -12,6 +12,14 @@ describe Hexagram do
   end
 
   context "instance methods" do
+    describe "#lines" do
+      it "returns all lines for a hexagram" do
+        expect(hexagram.lines.count).to eq 6
+        expect(hexagram.lines.first.place).to eq 1
+        expect(hexagram.lines.last.place).to eq 6
+      end
+    end
+
     describe "#line" do
       let!(:line) { hexagram.line(2) }
 
