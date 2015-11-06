@@ -23,7 +23,7 @@ module HasAttributes
     end]
   end
 
-  def to_json
+  def to_json(*args)
     JSON.generate(self.to_h)
   end
 end
