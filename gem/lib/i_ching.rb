@@ -1,4 +1,5 @@
 require "sequel"
+require "json"
 
 require "i_ching/has_attributes"
 require "i_ching/hexagram"

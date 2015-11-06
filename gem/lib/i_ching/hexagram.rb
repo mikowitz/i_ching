@@ -8,6 +8,10 @@ module IChing
         new(table[king_wen_number: king_wen_number])
       end
 
+      def all
+        table.map { |hexagram| new(hexagram) }
+      end
+
       private
 
       def table

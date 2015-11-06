@@ -4,6 +4,12 @@ describe Hexagram do
   let!(:hexagram) { Hexagram.get(5) }
 
   context "class methods" do
+    describe ".all" do
+      it "returns all hexagrams" do
+        expect(Hexagram.all.map(&:king_wen_number)).to eq (1..64).to_a
+      end
+    end
+
     describe ".get" do
       it "returns the correct hexagram" do
         expect(hexagram.english_name).to eq "Waiting (Nourishment)"
@@ -12,6 +18,14 @@ describe Hexagram do
   end
 
   context "instance methods" do
+    describe "#to_json" do
+      let(:json) { hexagram.to_json }
+
+      it "returns valid json" do
+        expect(JSON.parse(json)["king_wen_number"]).to eq 5
+      end
+    end
+
     describe "#lines" do
       it "returns all lines for a hexagram" do
         expect(hexagram.lines.count).to eq 6

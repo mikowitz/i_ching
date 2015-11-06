@@ -16,4 +16,14 @@ module HasAttributes
       instance_variable_set("@#{k}", v)
     end
   end
+
+  def to_h
+    Hash[self.class.attributes.map do |key|
+      [key, self.send(key)]
+    end]
+  end
+
+  def to_json
+    JSON.generate(self.to_h)
+  end
 end
