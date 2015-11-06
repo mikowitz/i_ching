@@ -22,17 +22,17 @@ class IChingServer < Sinatra::Base
       get "/hexagrams/:king_wen_number/lines/?:place?" do
         hexagram = IChing::Hexagram.get(params[:king_wen_number])
         if params[:place]
-          hexagram.line(params[:place]).to_json
+          json hexagram.line(params[:place])
         else
-          JSON.generate(hexagram.lines.map(&:to_h))
+          json hexagram.lines.map(&:to_h)
         end
       end
 
       get "/trigrams/?:number?" do
         if params[:number]
-          IChing::Trigram.get(params[:number].to_i).to_json
+          json IChing::Trigram.get(params[:number].to_i)
         else
-          JSON.generate(IChing::Trigram.all.map(&:to_h))
+          json IChing::Trigram.all.map(&:to_h)
         end
       end
     end
