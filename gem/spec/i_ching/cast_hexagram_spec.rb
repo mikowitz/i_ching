@@ -48,4 +48,12 @@ describe CastHexagram do
       expect(hexagram.hexagram.king_wen_number).to eq 64
     end
   end
+
+  describe "#changed_hexagram" do
+    let(:hexagram) { CastHexagram.new(6,7,8,9,8,7) }
+
+    it "returns the hexagram model for the changed version of the cast hexagram" do
+      expect(hexagram.changed_hexagram.king_wen_number).to eq 41
+    end
+  end
 end

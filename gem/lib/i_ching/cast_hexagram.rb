@@ -40,6 +40,10 @@ module IChing
       Hexagram.get_by_binary(self.binary)
     end
 
+    def changed_hexagram
+      change.hexagram
+    end
+
     private
 
     def validate
