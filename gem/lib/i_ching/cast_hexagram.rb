@@ -25,11 +25,11 @@ module IChing
     end
 
     def change
-      CastHexagram.new(*lines.map { |line| CHANGES.fetch(line, line) })
+      CastHexagram.new(*process(CHANGES))
     end
 
     def stabilize
-      CastHexagram.new(*lines.map { |line| STABILIZATIONS.fetch(line, line) })
+      CastHexagram.new(*process(STABILIZATIONS))
     end
 
     def binary
@@ -45,6 +45,10 @@ module IChing
     end
 
     private
+
+    def process(conversion_hash)
+      lines.map { |line| conversion_hash.fetch(line, line) }
+    end
 
     def validate
       raise InvalidCast unless @lines.count == 6
