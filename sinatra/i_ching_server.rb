@@ -28,6 +28,12 @@ class IChingServer < Sinatra::Base
         end
       end
 
+      get "/hexagram.?:casting_method?" do
+        casting_method = params[:casting_method] || :yarrow
+        hexagram = IChing.cast_hexagram(casting_method)
+        json hexagram.to_h
+      end
+
       get "/trigrams/?:number?" do
         if params[:number]
           json IChing::Trigram.get(params[:number].to_i)

@@ -1,7 +1,7 @@
 PATH
   remote: ~/projects/i_ching/gem
   specs:
-    i_ching (0.1.1)
+    i_ching (0.1.2)
       sequel
 
 GEM
@@ -49,7 +49,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  i_ching (= 0.1.1)!
+  i_ching (= 0.1.2)!
   rspec
   shotgun
   sinatra

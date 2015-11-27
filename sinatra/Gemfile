@@ -4,7 +4,7 @@ gem "sinatra"
 gem "sinatra-contrib"
 gem "shotgun"
 
-gem "i_ching", "= 0.1.1", path: "~/projects/i_ching/gem"
+gem "i_ching", "= 0.1.2", path: "~/projects/i_ching/gem"
 gem "sqlite3"
 
 gem "rspec"
