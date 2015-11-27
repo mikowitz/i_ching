@@ -56,4 +56,16 @@ describe CastHexagram do
       expect(hexagram.changed_hexagram.king_wen_number).to eq 41
     end
   end
+
+  describe "#to_h" do
+    let(:hexagram) { CastHexagram.new(7,7,7,7,7,9) }
+
+    it "should return the correct data set" do
+      expect(hexagram.to_h).to match({
+        lines: [7,7,7,7,7,9],
+        stable: 1,
+        changed: 43
+      })
+    end
+  end
 end

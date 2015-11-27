@@ -44,6 +44,14 @@ module IChing
       change.hexagram
     end
 
+    def to_h
+      {
+        lines: lines,
+        stable: hexagram.king_wen_number,
+        changed: changed_hexagram.king_wen_number
+      }
+    end
+
     private
 
     def process(conversion_hash)
