@@ -7,7 +7,10 @@ class AppDelegate < PM::Delegate
   ApplicationStylesheet.new(nil).application_setup
 
   def on_load(app, options)
-    open HomeScreen.new(nav_bar: true)
+    Hexagram.load_async do |hexagrams|
+      Turnkey.archive(hexagrams, "hexagrams")
+      open HexagramTableScreen.new(nav_bar: true)
+    end
   end
 
   # Remove this if you are only supporting portrait
