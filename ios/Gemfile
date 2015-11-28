@@ -11,6 +11,7 @@ gem "newclear" # Completely wipe out the simulator and rebuild
 
 # Optional
 
+gem "rake-hooks"
 gem "test_sweet"
 gem "turnkey"
 

@@ -101,6 +101,8 @@ GEM
     rack-protection (1.5.3)
       rack
     rake (10.4.2)
+    rake-hooks (1.2.3)
+      rake
     redpotion (1.4.0)
       ProMotion (>= 2.4.2)
       RedAlert
@@ -160,6 +162,7 @@ DEPENDENCIES
   motion-yaml (= 1.4)
   newclear
   rake
+  rake-hooks
   redpotion
   test_sweet
   turnkey

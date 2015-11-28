@@ -7,6 +7,10 @@ class AppDelegate < PM::Delegate
   ApplicationStylesheet.new(nil).application_setup
 
   def on_load(app, options)
+    load_data
+  end
+
+  def load_data
     Hexagram.load_async do |hexagrams|
       Turnkey.archive(hexagrams, "hexagrams")
       open HexagramTableScreen.new(nav_bar: true)
