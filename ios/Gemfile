@@ -11,9 +11,12 @@ gem "newclear" # Completely wipe out the simulator and rebuild
 
 # Optional
 
+gem "motion-environment-settings"
+gem "motion-stump"
 gem "rake-hooks"
 gem "test_sweet"
 gem "turnkey"
+gem "webstub"
 
 # gem "ProMotion-form"
 # gem "ProMotion-push", "~> 0.2" # Push Notifications

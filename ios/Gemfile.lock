@@ -81,10 +81,12 @@ GEM
     molinillo (0.4.0)
     motion-cocoapods (1.7.5)
       cocoapods (>= 0.34)
+    motion-environment-settings (0.0.3)
     motion-juxtapose (0.3.2)
       haml
       sinatra (~> 1.4)
     motion-require (0.2.0)
+    motion-stump (0.3.2)
     motion-yaml (1.4)
     motion_print (1.2.0)
     multi_json (1.11.2)
@@ -148,6 +150,7 @@ GEM
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     websocket (1.2.2)
+    webstub (1.1.5)
     xcodeproj (0.28.2)
       activesupport (>= 3)
       claide (~> 0.9.1)
@@ -159,6 +162,8 @@ PLATFORMS
 DEPENDENCIES
   afmotion
   motion-cocoapods
+  motion-environment-settings
+  motion-stump
   motion-yaml (= 1.4)
   newclear
   rake
@@ -166,6 +171,7 @@ DEPENDENCIES
   redpotion
   test_sweet
   turnkey
+  webstub
 
 BUNDLED WITH
    1.10.6

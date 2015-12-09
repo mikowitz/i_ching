@@ -1,17 +1,23 @@
 # -*- coding: utf-8 -*-
 $:.unshift('/Library/RubyMotion/lib')
 require 'motion/project/template/ios'
+require "rake/hooks"
+
 
 require 'bundler'
 Bundler.require
+
+require 'motion-juxtapose'
+
+ENV["ENV"] ||= "development"
 
 Dir.glob("lib/tasks/*.rake").each { |r| import r }
 
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings
 
-  app.name = 'ios'
-  app.identifier = 'com.your_domain_here.ios'
+  app.name = config["name"]
+  app.identifier = "com.songsaboutsnow.#{config["name"]}"
 
   app.short_version = '0.1.0'
   # Get version from git
@@ -75,4 +81,6 @@ Motion::Project::App.setup do |app|
   puts "Using certificate: #{app.codesign_certificate}"
 end
 
-# Remove this if you aren't using CDQ
+def config
+  YAML.load(File.read("./config/environments/#{ENV["ENV"]}.yml"))
+end
