@@ -1,5 +1,4 @@
 class AppDelegate < PM::Delegate
-
   status_bar true, animation: :fade
 
   # Without this, settings in StandardAppearance will not be correctly applied
@@ -11,8 +10,6 @@ class AppDelegate < PM::Delegate
   end
 
   def load_data
-    # Hexagram.load_async do |hexagrams|
-    puts "================>"
     API.hexagrams do |hexagrams|
       Turnkey.archive(hexagrams, "hexagrams")
       open HexagramTableScreen.new(nav_bar: true)
