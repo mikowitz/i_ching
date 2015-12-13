@@ -4,7 +4,6 @@ module API
   end
 
   def self.cast(casting_method, &block)
-    puts "==========> in the regular API module..."
     get("hexagram.#{casting_method}", &block)
   end
 

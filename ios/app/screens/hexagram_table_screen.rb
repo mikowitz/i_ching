@@ -1,18 +1,26 @@
 class HexagramTableScreen < PM::TableScreen
+  stylesheet HexagramTableScreenStylesheet
   title "Hexagrams"
+
+  def preferredStatusBarStyle
+    UIStatusBarStyleLightContent
+  end
 
   def table_data
     [{
        cells: [
          {
            title: "Cast Hexagram",
-           action: :show_cast_hexagram_menu
+           action: :show_cast_hexagram_menu,
+           style: {
+             background_color: rmq.color.off_white,
+             text_color: rmq.color.off_black,
+             text_alignment: NSTextAlignmentRight
+           }
          }
        ]
      },
      {
-       title: " ",
-       title_view_height: 20,
        cells: Turnkey.unarchive("hexagrams").map do |hexagram|
          {
            title: hexagram["chinese_name"],
@@ -20,6 +28,10 @@ class HexagramTableScreen < PM::TableScreen
            action: :show_hexagram,
            arguments: {
              hexagram: hexagram
+           },
+           style: {
+             background_color: rmq.color.off_white,
+             text_color: rmq.color.off_black
            }
          }
        end
@@ -27,7 +39,7 @@ class HexagramTableScreen < PM::TableScreen
     ]
   end
 
-  def show_hexagram(args={})
+  def show_hexagram(args)
     open HexagramScreen.new(hexagram: args[:hexagram])
   end
 

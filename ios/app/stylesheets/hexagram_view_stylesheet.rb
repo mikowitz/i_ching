@@ -8,7 +8,7 @@ module HexagramViewStylesheet
   def hexagram_line(st)
     dim = st.superview.frame.size.height / 24
     st.frame = { w: dim * 22, h: dim * 2, l: dim }
-    st.background_color = color.black
+    st.background_color = color.off_black
     st.corner_radius = 6
   end
 end

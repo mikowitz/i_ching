@@ -29,18 +29,18 @@ class HexagramView < UIView
           q.append!(UIView, :hexagram_line).style do |st|
             dim = q.frame.size.width / 24
             st.frame = { t: dim * ((4 * index) + 1), w: dim * 8 }
-            st.background_color = rmq.color.blue
+            st.background_color = rmq.color.changing_line
           end
           q.append!(UIView, :hexagram_line).style do |st|
             dim = q.frame.size.width / 24
             st.frame = { t: dim * ((4 * index) + 1), w: dim * 8, fr: dim }
-            st.background_color = rmq.color.blue
+            st.background_color = rmq.color.changing_line
           end
         when 9
           q.append!(UIView, :hexagram_line).style do |st|
             dim = q.frame.size.width / 24
             st.frame = { t: dim * ((4 * index) + 1) }
-            st.background_color = rmq.color.blue
+            st.background_color = rmq.color.changing_line
           end
         end
       end

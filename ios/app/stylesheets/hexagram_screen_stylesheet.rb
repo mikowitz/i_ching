@@ -3,7 +3,7 @@ class HexagramScreenStylesheet < ApplicationStylesheet
   include HexagramTextViewStylesheet
 
   def root_view(st)
-    st.background_color = color.white
+    st.background_color = color.off_white
   end
 
   def title(st)

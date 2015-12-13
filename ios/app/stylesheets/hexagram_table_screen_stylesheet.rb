@@ -1,0 +1,2 @@
+class HexagramTableScreenStylesheet < ApplicationStylesheet
+end
