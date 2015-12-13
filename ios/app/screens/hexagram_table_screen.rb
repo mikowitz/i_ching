@@ -55,6 +55,6 @@ class HexagramTableScreen < PM::TableScreen
   end
 
   def cast_hexagram(method)
-    open CastHexagramScreen.new(casting_method: method)
+    open CastingRootScreen.new(casting_method: method)
   end
 end

@@ -7,3 +7,7 @@ end
 before :"test_sweet" do
   ENV["ENV"] = "integration"
 end
+
+before :"spec" do
+  ENV["ENV"] = "integration"
+end

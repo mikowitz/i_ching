@@ -13,6 +13,11 @@ class StandardAppearance
         o.font = rmq.font.medium
       end
 
+      UIPageControl.appearance.tap do |o|
+        o.pageIndicatorTintColor = rmq.color.black
+        o.currentPageIndicatorTintColor = rmq.color(150, 150, 150)
+      end
+
       # UITabBar.appearance.tap do |o|
       #   o.setTintColor rmq.color.blue
       # end
@@ -48,4 +53,3 @@ class StandardAppearance
     end
   end
 end
-
