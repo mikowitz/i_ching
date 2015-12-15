@@ -3,7 +3,6 @@ class CastingRootScreen < PM::Screen
   attr_accessor :casting_method, :cast_result
 
   def on_load
-    # rmq(self).apply_style(:root_view)
     API.cast(self.casting_method) do |result|
       self.cast_result = result
       CastHexagramPageViewScreen.new.tap do |screen|

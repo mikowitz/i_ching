@@ -24,6 +24,9 @@ GEM
     awesome_print (1.6.1)
     blankslate (2.1.2.4)
     builder (3.2.2)
+    cdq (1.0.8)
+      motion-yaml (= 1.4)
+      ruby-xcdm (>= 0.0.9)
     childprocess (0.5.8)
       ffi (~> 1.0, >= 1.0.11)
     claide (0.9.1)
@@ -100,6 +103,7 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     parslet (1.5.0)
       blankslate (~> 2.0)
+    plist (3.1.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -127,6 +131,10 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    ruby-xcdm (0.0.9)
+      activesupport (~> 4.1)
+      builder (~> 3.2)
+      plist (~> 3.1)
     ruby_motion_query (1.7.0)
     rubyzip (1.1.7)
     selenium-webdriver (2.48.1)
@@ -162,6 +170,7 @@ PLATFORMS
 
 DEPENDENCIES
   afmotion
+  cdq
   motion-cocoapods
   motion-environment-settings
   motion-stump

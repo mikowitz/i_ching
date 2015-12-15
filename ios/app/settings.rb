@@ -1,3 +1,3 @@
 class Settings
-  def self.name; "IChing Dev"; end
+  def self.name; "IChing Test"; end
 end

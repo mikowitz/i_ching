@@ -9,6 +9,7 @@ class HexagramTextView < UIView
 
   def draw_text
     rmq(self).tap do |q|
+      q.apply_style(:hexagram_text_content)
       q.append!(UISegmentedControl, :hexagram_text_content_switcher).tap do |switcher|
         switcher.insertSegmentWithTitle("Image", atIndex: 0, animated: true)
         switcher.insertSegmentWithTitle("Judgement", atIndex: 1, animated: true)
@@ -17,7 +18,7 @@ class HexagramTextView < UIView
       end
       q.append(UIScrollView, :scroll_view).tap do |scroll|
         scroll.append(UILabel, :hexagram_text).style do |st|
-          st.text = self.delegate.hexagram["image"]
+          st.text = self.delegate.hexagram.image
           st.font = rmq.font.tiny
           st.size_to_fit
           st.frame = { t: 20, centered: :horizontal }
@@ -30,9 +31,9 @@ class HexagramTextView < UIView
   def switcher_changed
     case rmq(:hexagram_text_content_switcher).get.selectedSegmentIndex
     when 0
-      content = delegate.hexagram["image"]
+      content = delegate.hexagram.image
     when 1
-      content = delegate.hexagram["judgement"]
+      content = delegate.hexagram.judgement
     end
     rmq(:hexagram_text).style do |st|
       st.text = content

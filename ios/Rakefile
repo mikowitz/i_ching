@@ -86,3 +86,4 @@ end
 def config
   YAML.load(File.read("./config/environments/#{ENV["ENV"]}.yml"))
 end
+task :"build:simulator" => :"schema:build"

@@ -2,10 +2,6 @@ class HexagramTableScreen < PM::TableScreen
   stylesheet HexagramTableScreenStylesheet
   title "Hexagrams"
 
-  def preferredStatusBarStyle
-    UIStatusBarStyleLightContent
-  end
-
   def table_data
     [{
        cells: [
@@ -21,10 +17,10 @@ class HexagramTableScreen < PM::TableScreen
        ]
      },
      {
-       cells: Turnkey.unarchive("hexagrams").map do |hexagram|
+       cells: Hexagram.sort_by(:king_wen_number).map do |hexagram|
          {
-           title: hexagram["chinese_name"],
-           subtitle: hexagram["english_name"],
+           title: hexagram.chinese_name,
+           subtitle: hexagram.english_name,
            action: :show_hexagram,
            arguments: {
              hexagram: hexagram

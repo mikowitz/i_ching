@@ -27,9 +27,9 @@ class StandardAppearance
       # end
 
       UINavigationBar.appearance.tap do |o|
-        o.barTintColor = rmq.color.off_black
+        o.barTintColor = rmq.color.black
         o.setTintColor rmq.color.off_white
-        o.translucent = true
+        # o.translucent = false
 
         o.setTitleTextAttributes({
           UITextAttributeFont => rmq.font.small,

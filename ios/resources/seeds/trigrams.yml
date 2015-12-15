@@ -1,0 +1,48 @@
+---
+- number: 1
+  binary: 7
+  english_name: "The Creative"
+  chinese_name: "Qián"
+  characters: "乾"
+
+- number: 2
+  binary: 0
+  english_name: "The Receptive"
+  chinese_name: "Kūn"
+  characters: "坤"
+
+- number: 3
+  binary: 4
+  english_name: "The Arousing"
+  chinese_name: "Zhèn"
+  characters: "震"
+
+- number: 4
+  binary: 1
+  english_name: "Keeping Still"
+  chinese_name: "Gèn"
+  characters: "艮"
+
+- number: 5
+  binary: 2
+  english_name: "The Abysmal"
+  chinese_name: "Kăn"
+  characters: "坎"
+
+- number: 6
+  binary: 5
+  english_name: "The Clinging"
+  chinese_name: "Lí"
+  characters: "離"
+
+- number: 7
+  binary: 6
+  english_name: "The Joyous"
+  chinese_name: "Duì"
+  characters: "兌"
+
+- number: 8
+  binary: 3
+  english_name: "The Gentle"
+  chinese_name: "Xùn"
+  characters: "巽"

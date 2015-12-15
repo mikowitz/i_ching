@@ -1,0 +1,384 @@
+---
+- king_wen_number: 1
+  binary: 63
+  english_name: "The Creative"
+  chinese_name: "Qián"
+  characters: "乾"
+
+- king_wen_number: 2
+  binary: 0
+  english_name: "The Receptive"
+  chinese_name: "Kūn"
+  characters: "坤"
+
+- king_wen_number: 3
+  binary: 34
+  english_name: "Difficulty at the Beginning"
+  chinese_name: "Zhūn"
+  characters: "屯"
+
+- king_wen_number: 4
+  binary: 17
+  english_name: "Youthful Folly"
+  chinese_name: "Méng"
+  characters: "蒙"
+
+- king_wen_number: 5
+  binary: 58
+  english_name: "Waiting (Nourishment)"
+  chinese_name: "Xū"
+  characters: "需"
+
+- king_wen_number: 6
+  binary: 23
+  english_name: "Conflict"
+  chinese_name: "Sòng"
+  characters: "訟"
+
+- king_wen_number: 7
+  binary: 16
+  english_name: "The Army"
+  chinese_name: "Shī"
+  characters: "師"
+
+- king_wen_number: 8
+  binary: 2
+  english_name: "Holding Together [Union]"
+  chinese_name: "Bǐ"
+  characters: "比"
+
+- king_wen_number: 9
+  binary: 59
+  english_name: "The Taming Power of the Small"
+  chinese_name: "Xiǎo chù"
+  characters: "小畜"
+
+- king_wen_number: 10
+  binary: 55
+  english_name: "Treading [Conduct]"
+  chinese_name: "Lǚ"
+  characters: "履"
+
+- king_wen_number: 11
+  binary: 56
+  english_name: "Peace"
+  chinese_name: "Tài"
+  characters: "泰"
+
+- king_wen_number: 12
+  binary: 7
+  english_name: "Standstill [Stagnation]"
+  chinese_name: "Pǐ"
+  characters: "否"
+
+- king_wen_number: 13
+  binary: 47
+  english_name: "Fellowship with Men"
+  chinese_name: "Tóng rén"
+  characters: "同人"
+
+- king_wen_number: 14
+  binary: 61
+  english_name: "Possession in Great Measure"
+  chinese_name: "Dà yŏu"
+  characters: "大有"
+
+- king_wen_number: 15
+  binary: 8
+  english_name: "Modesty"
+  chinese_name: "Qiān"
+  characters: "謙"
+
+- king_wen_number: 16
+  binary: 4
+  english_name: "Enthusiasm"
+  chinese_name: "Yù"
+  characters: "豫"
+
+- king_wen_number: 17
+  binary: 38
+  english_name: "Following"
+  chinese_name: "Suí"
+  characters: "隨"
+
+- king_wen_number: 18
+  binary: 25
+  english_name: "Work on What Has Been Spoiled [Decay]"
+  chinese_name: "Gŭ"
+  characters: "蠱"
+
+- king_wen_number: 19
+  binary: 48
+  english_name: "Approach"
+  chinese_name: "Lín"
+  characters: "臨"
+
+- king_wen_number: 20
+  binary: 3
+  english_name: "Contemplation (View)"
+  chinese_name: "Guān"
+  characters: "觀"
+
+- king_wen_number: 21
+  binary: 37
+  english_name: "Biting Through"
+  chinese_name: "Shì hè"
+  characters: "噬嗑"
+
+- king_wen_number: 22
+  binary: 41
+  english_name: "Grace"
+  chinese_name: "Bì"
+  characters: "賁"
+
+- king_wen_number: 23
+  binary: 1
+  english_name: "Splitting Apart"
+  chinese_name: "Bō"
+  characters: "剝"
+
+- king_wen_number: 24
+  binary: 32
+  english_name: "Return (The Turning Point)"
+  chinese_name: "Fù"
+  characters: "復"
+
+- king_wen_number: 25
+  binary: 39
+  english_name: "Innocence (The Unexpected)"
+  chinese_name: "Wú wàng"
+  characters: "無妄"
+
+- king_wen_number: 26
+  binary: 57
+  english_name: "The Taming Power of the Great"
+  chinese_name: "Dà xù"
+  characters: "大畜"
+
+- king_wen_number: 27
+  binary: 33
+  english_name: "The Corners of the Mouth (Providing Nourishment)"
+  chinese_name: "Yí"
+  characters: "頤"
+
+- king_wen_number: 28
+  binary: 30
+  english_name: "Preponderance of the Great"
+  chinese_name: "Dà guò"
+  characters: "大過"
+
+- king_wen_number: 29
+  binary: 18
+  english_name: "The Abysmal (Water)"
+  chinese_name: "Kăn"
+  characters: "坎"
+
+- king_wen_number: 30
+  binary: 45
+  english_name: "The Clinging Fire"
+  chinese_name: "Lí"
+  characters: "離"
+
+- king_wen_number: 31
+  binary: 14
+  english_name: "Influence (Wooing)"
+  chinese_name: "Xián"
+  characters: "咸"
+
+- king_wen_number: 32
+  binary: 28
+  english_name: "Duration"
+  chinese_name: "Héng"
+  characters: "恆"
+
+- king_wen_number: 33
+  binary: 15
+  english_name: "Retreat"
+  chinese_name: "Dùn"
+  characters: "遯"
+
+- king_wen_number: 34
+  binary: 60
+  english_name: "The Power of the Great"
+  chinese_name: "Dà zhuàng"
+  characters: "大壯"
+
+- king_wen_number: 35
+  binary: 5
+  english_name: "Progress"
+  chinese_name: "Jìn"
+  characters: "晉"
+
+- king_wen_number: 36
+  binary: 40
+  english_name: "Darkening of the Light"
+  chinese_name: "Míng yí"
+  characters: "明夷"
+
+- king_wen_number: 37
+  binary: 43
+  english_name: "The Family [The Clan]"
+  chinese_name: "Jiā rén"
+  characters: "家人"
+
+- king_wen_number: 38
+  binary: 53
+  english_name: "Opposition"
+  chinese_name: "Kuí"
+  characters: "睽"
+
+- king_wen_number: 39
+  binary: 10
+  english_name: "Obstruction"
+  chinese_name: "Jiăn"
+  characters: "蹇"
+
+- king_wen_number: 40
+  binary: 20
+  english_name: "Deliverance"
+  chinese_name: "Xiè"
+  characters: "解"
+
+- king_wen_number: 41
+  binary: 49
+  english_name: "Decrease"
+  chinese_name: "Sŭn"
+  characters: "損"
+
+- king_wen_number: 42
+  binary: 35
+  english_name: "Increase"
+  chinese_name: "Yì"
+  characters: "益"
+
+- king_wen_number: 43
+  binary: 62
+  english_name: "Break-through (Resoluteness)"
+  chinese_name: "Kuài"
+  characters: "夬"
+
+- king_wen_number: 44
+  binary: 31
+  english_name: "Coming to Meet"
+  chinese_name: "Gòu"
+  characters: "姤"
+
+- king_wen_number: 45
+  binary: 6
+  english_name: "Gathering Together [Massing]"
+  chinese_name: "Cuì"
+  characters: "萃"
+
+- king_wen_number: 46
+  binary: 24
+  english_name: "Pushing Upward"
+  chinese_name: "Shēng"
+  characters: "升"
+
+- king_wen_number: 47
+  binary: 22
+  english_name: "Oppression (Exhaustion)"
+  chinese_name: "Kùn"
+  characters: "困"
+
+- king_wen_number: 48
+  binary: 26
+  english_name: "The Well"
+  chinese_name: "Jĭng"
+  characters: "井"
+
+- king_wen_number: 49
+  binary: 46
+  english_name: "Revolution (Molting)"
+  chinese_name: "Gé"
+  characters: "革"
+
+- king_wen_number: 50
+  binary: 29
+  english_name: "The Caldron"
+  chinese_name: "Dĭng"
+  characters: "鼎"
+
+- king_wen_number: 51
+  binary: 36
+  english_name: "The Arousing (Shock Thunder)"
+  chinese_name: "Zhèn"
+  characters: "震"
+
+- king_wen_number: 52
+  binary: 9
+  english_name: "Keeping Still Mountain"
+  chinese_name: "Gèn"
+  characters: "艮"
+
+- king_wen_number: 53
+  binary: 11
+  english_name: "Development (Gradual Progress)"
+  chinese_name: "Jiàn"
+  characters: "漸"
+
+- king_wen_number: 54
+  binary: 52
+  english_name: "The Marrying Maiden"
+  chinese_name: "Guī mèi"
+  characters: "歸妹"
+
+- king_wen_number: 55
+  binary: 44
+  english_name: "Abundance [Fullness]"
+  chinese_name: "Fēng"
+  characters: "豐"
+
+- king_wen_number: 56
+  binary: 13
+  english_name: "The Wanderer"
+  chinese_name: "Lǚ"
+  characters: "旅"
+
+- king_wen_number: 57
+  binary: 27
+  english_name: "The Gentle (The Penetrating Wind)"
+  chinese_name: "Sùn"
+  characters: "巽"
+
+- king_wen_number: 58
+  binary: 54
+  english_name: "The Joyous Lake"
+  chinese_name: "Duì"
+  characters: "兌"
+
+- king_wen_number: 59
+  binary: 19
+  english_name: "Dispersion [Dissolution]"
+  chinese_name: "Huàn"
+  characters: "渙"
+
+- king_wen_number: 60
+  binary: 50
+  english_name: "Limitation"
+  chinese_name: "Jié"
+  characters: "節"
+
+- king_wen_number: 61
+  binary: 51
+  english_name: "Inner Truth"
+  chinese_name: "Zhōng fú"
+  characters: "中孚"
+
+- king_wen_number: 62
+  binary: 12
+  english_name: "Preponderance of the Small"
+  chinese_name: "Xiăo guò"
+  characters: "小過"
+
+- king_wen_number: 63
+  binary: 42
+  english_name: "After Completion"
+  chinese_name: "Jì jì"
+  characters: "既濟"
+
+- king_wen_number: 64
+  binary: 21
+  english_name: "Before Completion"
+  chinese_name: "Wèi jì"
+  characters: "未濟"

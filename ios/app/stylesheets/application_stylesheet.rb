@@ -24,7 +24,7 @@ class ApplicationStylesheet < RubyMotionQuery::Stylesheet
     color.add_named :tint, '236EB7'
     color.add_named :translucent_black, color(0, 0, 0, 0.4)
     color.add_named :battleship_gray,   '#7F7F7F'
-    color.add_named :off_black, "#111122"
+    color.add_named :off_black, "#131313"
     color.add_named :off_white, "#e5e5f2"
     color.add_named :changing_line, "#551111"
 

@@ -4,7 +4,7 @@ class CastingRootScreenStylesheet < ApplicationStylesheet
   end
 
   def page_control(st)
-    st.accessibility_label = "page-control"
+    st.frame = { fb: 100 }
   end
 
   def paginator(st)

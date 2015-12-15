@@ -1,0 +1,2 @@
+class Trigram < CDQManagedObject
+end
