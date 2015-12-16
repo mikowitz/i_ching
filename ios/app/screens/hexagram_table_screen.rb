@@ -2,17 +2,20 @@ class HexagramTableScreen < PM::TableScreen
   stylesheet HexagramTableScreenStylesheet
   title "Hexagrams"
 
+  def table_cell_style
+    {
+      background_color: rmq.color.off_white,
+      text_color: rmq.color.off_black
+    }
+  end
+
   def table_data
     [{
        cells: [
          {
            title: "Cast Hexagram",
            action: :show_cast_hexagram_menu,
-           style: {
-             background_color: rmq.color.off_white,
-             text_color: rmq.color.off_black,
-             text_alignment: NSTextAlignmentRight
-           }
+           style: table_cell_style.merge(text_alignment: NSTextAlignmentRight)
          }
        ]
      },
@@ -25,10 +28,7 @@ class HexagramTableScreen < PM::TableScreen
            arguments: {
              hexagram: hexagram
            },
-           style: {
-             background_color: rmq.color.off_white,
-             text_color: rmq.color.off_black
-           }
+           style: table_cell_style
          }
        end
      }
@@ -40,26 +40,13 @@ class HexagramTableScreen < PM::TableScreen
   end
 
   def show_cast_hexagram_menu
-    menu = UIAlertController.alertControllerWithTitle("Choose casting method",
-                                                      message: nil,
-                                                      preferredStyle: UIAlertControllerStyleActionSheet)
-    yarrow = UIAlertAction.actionWithTitle("Yarrow",
-                                           style: UIAlertActionStyleDefault,
-                                           handler: -> (_){ cast_hexagram(:yarrow) })
-    menu.addAction(yarrow)
-    coins = UIAlertAction.actionWithTitle("Coins",
-                                           style: UIAlertActionStyleDefault,
-                                           handler: -> (_){ cast_hexagram(:coins) })
-    menu.addAction(coins)
-    random = UIAlertAction.actionWithTitle("Random",
-                                           style: UIAlertActionStyleDefault,
-                                           handler: -> (_){ cast_hexagram(:random) })
-    menu.addAction(random)
-    cancel = UIAlertAction.actionWithTitle("Cancel",
-                                           style: UIAlertActionStyleCancel,
-                                           handler: nil)
-    menu.addAction(cancel)
-    presentViewController(menu, animated: true, completion: nil)
+    presentViewController(cast_hexagram_menu.alert_controller, animated: true, completion: nil)
+  end
+
+  def cast_hexagram_menu
+    @cast_hexagram_menu ||= CastHexagramMenu.new.tap do |menu|
+      menu.delegate = self
+    end
   end
 
   def cast_hexagram(method)

@@ -20,7 +20,7 @@ class HexagramTextView < UIView
         scroll.append(UILabel, :hexagram_text).style do |st|
           st.text = self.delegate.hexagram.image
           st.font = rmq.font.tiny
-          st.size_to_fit
+          st.resize_height_to_fit
           st.frame = { t: 20, centered: :horizontal }
         end
         scroll.get.contentSize = rmq(:hexagram_text).frame.size

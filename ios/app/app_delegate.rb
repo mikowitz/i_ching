@@ -15,6 +15,8 @@ class AppDelegate < PM::Delegate
   def load_data
     Seeder.import_hexagrams
     cdq.save
+    Seeder.import_lines
+    cdq.save
     open HexagramTableScreen.new(nav_bar: true)
   end
 

@@ -14,8 +14,8 @@ class StandardAppearance
       end
 
       UIPageControl.appearance.tap do |o|
-        o.pageIndicatorTintColor = rmq.color.black
-        o.currentPageIndicatorTintColor = rmq.color(150, 150, 150)
+        o.pageIndicatorTintColor = rmq.color(150, 150, 150)
+        o.currentPageIndicatorTintColor = rmq.color.off_black
       end
 
       # UITabBar.appearance.tap do |o|
@@ -27,7 +27,7 @@ class StandardAppearance
       # end
 
       UINavigationBar.appearance.tap do |o|
-        o.barTintColor = rmq.color.black
+        o.barTintColor = rmq.color(0, 0, 10)
         o.setTintColor rmq.color.off_white
         # o.translucent = false
 

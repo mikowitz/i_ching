@@ -1,6 +1,26 @@
 module Seeder
   extend self
 
+  def import_lines
+    lines = load_seed_file("lines")
+    lines.each do |king_wen_number, line_data|
+      king_wen_number = king_wen_number.to_i
+      hexagram = Hexagram.find(king_wen_number)
+      next if hexagram.lines.count == 6
+      mp "======> creating lines for #{hexagram.king_wen_number}"
+      line_data.each do |place, meaning|
+        place = place.to_i
+        next if !!hexagram.lines.where(place: place).first
+        mp "==========> creating line #{place}"
+        Line.create(
+          hexagram: hexagram,
+          place: place,
+          meaning: meaning
+        )
+      end
+    end
+  end
+
   def import_hexagrams
     hexagrams = load_seed_file("hexagrams")
     hexagrams.each do |hexagram|

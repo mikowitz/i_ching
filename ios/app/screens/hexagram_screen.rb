@@ -4,9 +4,9 @@ class HexagramScreen < PM::Screen
 
   def on_load
     self.title = hexagram.chinese_name
-    rmq(self.view).apply_style(:root_view)
 
     rmq(self.view).tap do |q|
+      q.apply_style(:root_view)
       q.append!(HexagramTextView).tap do |text_view|
         text_view.delegate = self
         text_view.draw_text
@@ -16,6 +16,7 @@ class HexagramScreen < PM::Screen
       end
       q.append!(HexagramView).tap do |hv|
         hv.lines = hexagram.binary.to_s(2).rjust(6, "0").split("")
+        hv.hexagram = hexagram
         hv.draw_lines
       end
     end

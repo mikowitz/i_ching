@@ -4,7 +4,7 @@ module HexagramTextViewStylesheet
   end
 
   def hexagram_text_content_switcher(st)
-    st.frame = { t: 10, w: screen_width - 60, centered: :horizontal, h: 30 }
+    st.frame = { t: 15, w: screen_width - 60, centered: :horizontal, h: 30 }
     st.tint_color = color.off_black
   end
 

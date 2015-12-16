@@ -1,5 +1,5 @@
 class HexagramView < UIView
-  attr_accessor :lines
+  attr_accessor :lines, :hexagram, :delegate
 
   def rmq_build
     rmq(self).tap do |q|
@@ -10,38 +10,12 @@ class HexagramView < UIView
   def draw_lines
     rmq(self).tap do |q|
       lines.reverse.each_with_index do |line, index|
-        case line.to_i
-        when 0, 8
-          q.append!(UIView, :hexagram_line).style do |st|
-            dim = q.frame.size.width / 24
-            st.frame = { t: dim * ((4 * index) + 1), w: dim * 8 }
-          end
-          q.append!(UIView, :hexagram_line).style do |st|
-            dim = q.frame.size.width / 24
-            st.frame = { t: dim * ((4 * index) + 1), w: dim * 8, fr: dim }
-          end
-        when 1, 7
-          q.append!(UIView, :hexagram_line).style do |st|
-            dim = q.frame.size.width / 24
-            st.frame = { t: dim * ((4 * index) + 1) }
-          end
-        when 6
-          q.append!(UIView, :hexagram_line).style do |st|
-            dim = q.frame.size.width / 24
-            st.frame = { t: dim * ((4 * index) + 1), w: dim * 8 }
-            st.background_color = rmq.color.changing_line
-          end
-          q.append!(UIView, :hexagram_line).style do |st|
-            dim = q.frame.size.width / 24
-            st.frame = { t: dim * ((4 * index) + 1), w: dim * 8, fr: dim }
-            st.background_color = rmq.color.changing_line
-          end
-        when 9
-          q.append!(UIView, :hexagram_line).style do |st|
-            dim = q.frame.size.width / 24
-            st.frame = { t: dim * ((4 * index) + 1) }
-            st.background_color = rmq.color.changing_line
-          end
+        dim = q.frame.size.width / 24
+        q.append!(HexagramLine.new(line.to_i, dim, index)).tap do |hl|
+          hl.delegate = self.delegate
+          hl.hexagram_view = self
+          hl.line = line.to_i
+          hl.draw_line_segments
         end
       end
     end
